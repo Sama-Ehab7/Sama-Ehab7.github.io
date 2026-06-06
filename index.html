@@ -16,7 +16,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body data-theme="dark">
+  <div class="galaxy-bg" aria-hidden="true">
+    <span class="star-layer star-layer-one"></span>
+    <span class="star-layer star-layer-two"></span>
+    <span class="star-layer star-layer-three"></span>
+  </div>
+
   <header class="site-header">
     <nav class="nav-shell" aria-label="Primary navigation">
       <a class="brand" href="#top" aria-label="Sama Ehab home">
@@ -30,10 +36,16 @@
         <li><a href="#experience">Experience</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <a class="nav-action" href="mailto:samaehab2004@gmail.com">
-        <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
-        Contact
-      </a>
+      <div class="nav-controls">
+        <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false">
+          <i class="fa-solid fa-sun" aria-hidden="true"></i>
+          <span>Light</span>
+        </button>
+        <a class="nav-action" href="mailto:samaehab2004@gmail.com">
+          <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+          Contact
+        </a>
+      </div>
     </nav>
   </header>
 
@@ -321,6 +333,28 @@
   </footer>
 
   <script>
+    const themeToggle = document.querySelector(".theme-toggle");
+    const themeIcon = themeToggle.querySelector("i");
+    const themeLabel = themeToggle.querySelector("span");
+    const savedTheme = localStorage.getItem("portfolio-theme");
+
+    function setTheme(theme) {
+      document.body.dataset.theme = theme;
+      localStorage.setItem("portfolio-theme", theme);
+
+      const isDark = theme === "dark";
+      themeIcon.className = isDark ? "fa-solid fa-sun" : "fa-solid fa-moon";
+      themeLabel.textContent = isDark ? "Light" : "Dark";
+      themeToggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+      themeToggle.setAttribute("aria-pressed", String(!isDark));
+    }
+
+    setTheme(savedTheme || "dark");
+
+    themeToggle.addEventListener("click", () => {
+      setTheme(document.body.dataset.theme === "dark" ? "light" : "dark");
+    });
+
     const revealItems = document.querySelectorAll(".reveal");
 
     const revealObserver = new IntersectionObserver(
