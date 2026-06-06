@@ -303,11 +303,11 @@ a {
 }
 
 .hero-copy h1 {
-  max-width: 790px;
+  max-width: 680px;
   margin: 0;
   color: var(--heading);
-  font-size: clamp(2.7rem, 7vw, 5.7rem);
-  line-height: 0.98;
+  font-size: clamp(2.15rem, 5vw, 4.35rem);
+  line-height: 1.03;
   letter-spacing: 0;
 }
 
@@ -392,12 +392,15 @@ a {
 
 .profile-panel {
   position: relative;
+  padding-top: 10px;
 }
 
 .profile-photo {
+  position: relative;
+  z-index: 3;
   width: 180px;
   height: 180px;
-  margin: 0 auto -58px;
+  margin: 0 auto -34px;
   object-fit: cover;
   border: 6px solid rgba(255, 255, 255, 0.72);
   border-radius: var(--radius);
@@ -405,7 +408,9 @@ a {
 }
 
 .profile-card {
-  padding: 84px 28px 28px;
+  position: relative;
+  z-index: 1;
+  padding: 58px 28px 28px;
   background: linear-gradient(145deg, var(--glass-strong), var(--glass-soft));
   color: var(--text);
   border: 1px solid var(--line);
@@ -866,7 +871,7 @@ a {
   }
 
   .hero-copy h1 {
-    font-size: clamp(2.35rem, 12vw, 3.45rem);
+    font-size: clamp(2.05rem, 10vw, 3rem);
   }
 
   .hero-lead {
@@ -876,10 +881,11 @@ a {
   .profile-photo {
     width: 150px;
     height: 150px;
+    margin-bottom: -26px;
   }
 
   .profile-card {
-    padding: 74px 22px 22px;
+    padding: 48px 22px 22px;
   }
 
   .text-stack,
