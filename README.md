@@ -1,7 +1,11 @@
-# Sama-Ehab7.github.io
+# Sama Ehab Portfolio
 
-Static portfolio website for GitHub Pages.
+Professional static portfolio website built with HTML, CSS, and JavaScript.
 
-Public link: https://Sama-Ehab7.github.io
+Live portfolio link:
 
-GitHub Pages can serve this directly because `index.html` is in the repository root and the styling is in `styles.css`.
+https://sama-ehab7.github.io
+
+GitHub Pages opens this site directly from `index.html` in the repository root, with the UI styles loaded from `styles.css`.
+
+If the live link still shows an older or different UI, commit and push the latest `index.html` and `styles.css` files to the `main` branch, then refresh the page after GitHub Pages finishes deploying.
