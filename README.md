@@ -4,7 +4,7 @@ Professional static portfolio website built with HTML, CSS, and JavaScript.
 
 Live portfolio link:
 
-https://sama-ehab7.github.io
+https://sama-ehab7.github.io/
 
 GitHub Pages opens this site directly from `index.html` in the repository root, with the UI styles loaded from `styles.css`.
 
