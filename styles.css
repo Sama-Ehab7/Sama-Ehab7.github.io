@@ -691,6 +691,18 @@ body[data-theme="light"] .gallery-hero {
     url("img/3d-chess-imgs/img1.png") center / cover;
 }
 
+.adoptly-hero {
+  background:
+    linear-gradient(125deg, rgba(7, 11, 22, 0.82), rgba(14, 36, 61, 0.5)),
+    url("img/adoptly-imgs/img1.jpeg") center / cover;
+}
+
+body[data-theme="light"] .adoptly-hero {
+  background:
+    linear-gradient(125deg, rgba(236, 247, 250, 0.78), rgba(218, 238, 246, 0.44)),
+    url("img/adoptly-imgs/img1.jpeg") center / cover;
+}
+
 .gallery-intro {
   width: min(760px, 100%);
   padding: 34px;
